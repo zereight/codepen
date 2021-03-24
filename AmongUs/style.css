@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+
+.sky {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.star {
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  animation: starMove linear infinite;
+}
+
+@keyframes starMove {
+  from {
+    transform: translate3d(-100%, 0, 1px);
+  }
+  to {
+    transform: translate3d(100vw, 0, 1px);
+  }
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white
+}
+
+.character{
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: characterMove 3s linear infinite;
+}
+
+@keyframes characterMove {
+    0% {
+      transform: translate(-100vw, 0)  rotateZ(0deg);
+    }
+    50% {
+      transform: translate(0%, -1rem) rotateZ(180deg);
+    }
+    100% {
+      transform: translate(100vw, -1.5rem) rotateZ(360deg);
+    }
+  }
+  
